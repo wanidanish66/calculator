@@ -1,7 +1,7 @@
 let currentInput = '';
 let operator = null;
 
-function appendNumber(number) {
+function takeNumber(number) {
     currentInput += number;
     updateDisplay();
 }
