@@ -12,18 +12,24 @@ function chooseOperation(op) {
     updateDisplay();
 }
 
+function backspace() {
+    let inputValue = document.getElementById("display").value;
+    inputValue = inputValue.substring(0, inputValue.length -1);
+    document.getElementById("display").value = inputValue;
+}
+
 function clearDisplay() {
     currentInput = '';
     operator = null;
     updateDisplay();
 }
 
-// function appendDecimal(dot) {
-//     if (!currentInput.includes(dot)) {
-//         currentInput += dot;
-//         updateDisplay();
-//     }
-// }
+function appendDecimal(dot) {
+    if (!currentInput.includes(dot)) {
+        currentInput += dot;
+        updateDisplay();
+    }
+}
 
 function calculate() {
     let result = eval(currentInput);
